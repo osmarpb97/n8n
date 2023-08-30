@@ -20,8 +20,6 @@ ARG ENCRYPTION_KEY
 ENV N8N_ENCRYPTION_KEY=$ENCRYPTION_KEY
 
 # Install npm packages
-RUN cd /usr/local/lib/node_modules/n8n
-RUN npm install crawlee@3.5.2
-RUN npm install got-scraping@3.2.15
+RUN cd /usr/local/lib/node_modules/n8n/ && npm install crawlee@3.5.2 && npm install got-scraping@3.2.15
 
 CMD ["export NODE_FUNCTION_ALLOW_EXTERNAL=* && n8n start"]
