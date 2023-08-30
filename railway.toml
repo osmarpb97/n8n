@@ -1,5 +1,5 @@
 [deploy]
-startCommand = "export NODE_FUNCTION_ALLOW_EXTERNAL=* && n8n start"
+startCommand = "NODE_FUNCTION_ALLOW_EXTERNAL=* n8n start"
 healthcheckPath = "/healthz"
 healthcheckTimeout = 300
 restartPolicyType = "on_failure"
