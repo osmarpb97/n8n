@@ -24,4 +24,4 @@ RUN cd /usr/local/lib/node_modules/n8n
 RUN npm install crawlee@3.5.2
 RUN npm install got-scraping@3.2.15
 
-CMD ["n8n start"]
+CMD ["export NODE_FUNCTION_ALLOW_EXTERNAL=* && n8n start"]
